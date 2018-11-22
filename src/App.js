@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import styles from './App.css';
+import styles from './App.scss';
 import classNames from 'classnames/bind';
 
 const blueBox = classNames.bind(styles);

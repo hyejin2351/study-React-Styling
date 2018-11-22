@@ -45,9 +45,6 @@ const getStyleLoaders = (cssOptions, preProcessor) => {
     {
       loader: require.resolve('css-loader'),
       options: {
-        importLoaders: 1,
-        modules: true,
-        localIdentName: '[path][name]__[local]--[hash:base64:5]'
       },
     },
     {
@@ -70,6 +67,14 @@ const getStyleLoaders = (cssOptions, preProcessor) => {
         ],
       },
     },
+    {
+      loader: require.resolve('sass-loader'),
+      options: {
+        importLoaders: 1,
+        modules: true,
+        localIdentName: '[path][name]__[local]--[hash:base64:5]'
+      },
+    }
   ];
   if (preProcessor) {
     loaders.push(require.resolve(preProcessor));
